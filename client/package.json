@@ -2,11 +2,23 @@
   "name": "client",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start:dev": "tsx watch src/index.ts"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "node-telegram-bot-api": "^0.65.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.8",
+    "@types/node-telegram-bot-api": "^0.64.6",
+    "tsx": "^4.8.2",
+    "typescript": "^5.4.5"
+  }
 }

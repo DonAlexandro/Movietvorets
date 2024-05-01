@@ -1,4 +1,4 @@
-FROM node:19.3.0
+FROM node:slim
 WORKDIR /server
 
 COPY package.json .
@@ -9,4 +9,5 @@ RUN if [ "$NODE_ENV" = "development" ]; \
     fi
 
 COPY . ./
-# CMD ["npm", "run", "start:dev"]
+
+CMD ["npm", "run", "start:dev"]
